@@ -1,10 +1,57 @@
----
-name: Feature
-about: Describe this issue template's purpose here.
-title: feature;
-labels: ''
-assignees: ''
-
----
-
-
+name: Feauture
+description: File a bug report
+title: "[Feauture;]: "
+labels: ["bug", "triage"]
+projects: ["octo-org/1", "octo-org/44"]
+assignees:
+  - octocat
+body:
+  - type: input
+    id: contact
+    attributes:
+      label: Contact Details
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this bug report!      placeholder: ex. email@example.com
+    validations:
+      required: false
+  - type: dropdown
+    id: typeofrequest
+    attributes:
+      label: Type of Request
+      description: Select the type of your request
+      options:
+        - NewFeauture
+        - EIEIEI
+      default: 0
+    validations:
+      required: true
+      placeholder: Tell us what you see!
+      value: "A bug happened!"
+    validations:
+      required: true
+  - type: dropdown
+    id: browsers
+    attributes:
+      label: What the OS which you want to suggest
+      multiple: true
+      options:
+        - Firefox
+        - Chrome
+        - Safari
+        - Microsoft Edge
+  - type: textarea
+    id: logs
+    attributes:
+      label: What are the detail of your suggestiong
+      description: explain what do you want.
+      render: shell
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: By submitting this issue, you agree to follow our [Code of Conduct](https://example.com)
+      options:
+        - label: I agree to follow this project's Code of Conduct
+          required: true
